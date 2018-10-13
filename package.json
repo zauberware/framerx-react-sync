@@ -1,0 +1,30 @@
+{
+  "name": "framerx-react-io",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "pull": "npm run src:pull",
+    "push": "npm run lib:build && npm run lib:push && npm run src:push",
+    "lib:build": "rm -rf lib/ && BABEL_ENV=production && babel _production/styled --out-dir lib/styled --copy-files && babel _production/components --out-dir lib/components --copy-files && babel _production/assets --out-dir lib/assets --copy-files",
+    "lib:push": "zip -d design-system.framerx lib/* && zip -ur design-system.framerx lib",
+    "src:pull": "unzip -o design-system.framerx design/* code/* -d .",
+    "src:push": "zip -ur design-system.framerx code/* design/*",
+    "restore": "cp _base.framerx design-system.framerx && zip -ur design-system.framerx lib/* && zip -ur design-system.framerx code/* design/*"
+  },
+  "keywords": [
+    "framerx",
+    "reactjs",
+    "components",
+    "export",
+    "import"
+  ],
+  "author": "Simon Franzen <simon@zauberware.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1"
+  }
+}
