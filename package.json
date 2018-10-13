@@ -1,5 +1,5 @@
 {
-  "name": "framerx-react-io",
+  "name": "framerx-react-sync",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -14,9 +14,12 @@
   "keywords": [
     "framerx",
     "reactjs",
+    "react",
+    "tools",
     "components",
     "export",
-    "import"
+    "import",
+    "sync"
   ],
   "author": "Simon Franzen <simon@zauberware.com>",
   "license": "MIT",
