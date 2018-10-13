@@ -21,13 +21,14 @@ export default class FlipCard extends Component {
       subtitle,
       excerpt,
       link,
+      background
     } = this.props
 
     const { flipped } = this.state
 
     return (
       <Card flippable flipped={flipped}>
-        <Card.Content front white flipped={flipped}>
+        <Card.Content front backgroundColor={background} flipped={flipped}>
           <h3>{title}</h3>
           <p>{subtitle}</p>
           <a onClick={this.flip}>flip me!</a>

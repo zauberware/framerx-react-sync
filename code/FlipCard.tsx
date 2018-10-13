@@ -8,16 +8,18 @@ interface Props {
   subtitle: string;
   abstract: string;
   link: string;
+  background: string;
 }
 
 export class FlipCard extends React.Component {
 
   // Set default properties
   static defaultProps = {
-    title: "Hey eine Karte",
-    subtitle: "Und ich kann mich drehen",
-    abstract: "Abstract goes here",
+    title: "Hey, I am a styled component",
+    subtitle: "imported from a production project.",
+    abstract: "You wanna know how it works? Just follow the Setup guidelines.",
     link: "https://www.zauberware.com",
+    background: "white",
   }
 
   // Items shown in property panel
@@ -26,6 +28,7 @@ export class FlipCard extends React.Component {
     subtitle: { type: ControlType.String, title: "Subtitle" },
     abstract: { type: ControlType.String, title: "Abstract" },
     link: { type: ControlType.String, title: "Link" },
+    background: { type: ControlType.Color, title: "Background Color" },
   }
 
   render() {
@@ -33,10 +36,11 @@ export class FlipCard extends React.Component {
       title,
       subtitle,
       abstract,
-      link
+      link,
+      background
     } = this.props
     return (
-      <_FlipCard title={title} subtitle={subtitle} excerpt={abstract} link={link} />
+      <_FlipCard title={title} subtitle={subtitle} excerpt={abstract} link={link} background={background}/>
     )
   }
 }

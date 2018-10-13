@@ -5,11 +5,11 @@
   "scripts": {
     "pull": "npm run src:pull",
     "push": "npm run lib:build && npm run lib:push && npm run src:push",
-    "lib:build": "rm -rf lib/ && BABEL_ENV=production && babel _production/styled --out-dir lib/styled --copy-files && babel _production/components --out-dir lib/components --copy-files && babel _production/assets --out-dir lib/assets --copy-files",
-    "lib:push": "zip -d design-system.framerx lib/* && zip -ur design-system.framerx lib",
-    "src:pull": "unzip -o design-system.framerx design/* code/* -d .",
-    "src:push": "zip -ur design-system.framerx code/* design/*",
-    "restore": "cp _base.framerx design-system.framerx && zip -ur design-system.framerx lib/* && zip -ur design-system.framerx code/* design/*"
+    "lib:build": "rm -rf lib/ && BABEL_ENV=production && babel _production --out-dir lib",
+    "lib:push": "zip -rd styled-components.framerx lib/**/* && zip -ur styled-components.framerx lib",
+    "src:pull": "unzip -o styled-components.framerx design/* code/* -d .",
+    "src:push": "zip -ur styled-components.framerx code/* design/*",
+    "restore": "cp _styled-components.restore.framerx styled-components.framerx && zip -ur styled-components.framerx lib/* code/* design/*"
   },
   "keywords": [
     "framerx",
