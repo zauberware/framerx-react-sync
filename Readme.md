@@ -20,7 +20,7 @@ We use this project as a boilerplate when we want to import real developed react
 
 ### Installation
 
-1. `$ git clone ... && cd ...`
+1. `$ git clone git@github.com:zauberware/framerx-react-sync.git && cd framerx-react-sync`
 2. `$ npm install`
 
 Open the FramerX project `styled-components.framerx`. This project has styled-components already preinstalled.
