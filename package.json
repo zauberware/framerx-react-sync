@@ -1,11 +1,11 @@
 {
   "name": "framerx-react-sync",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sync your react js (styled-)components with a FramerX project.",
   "scripts": {
     "pull": "npm run src:pull",
     "push": "npm run lib:build && npm run lib:push && npm run src:push",
-    "lib:build": "rm -rf lib/ && BABEL_ENV=production && babel _production --out-dir lib",
+    "lib:build": "rm -rf lib/ && BABEL_ENV=production && ./node_modules/babel-cli/bin/babel.js _production --out-dir lib",
     "lib:push": "zip -rd styled-components.framerx lib/**/* && zip -ur styled-components.framerx lib",
     "src:pull": "unzip -o styled-components.framerx design/* code/* -d .",
     "src:push": "zip -ur styled-components.framerx code/* design/*",
