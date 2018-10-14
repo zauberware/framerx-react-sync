@@ -1,10 +1,10 @@
-# FramerX React IO
+# FramerX React Sync - use styled-components in FramerX
 
 Inspired by https://github.com/shiftsave/framerx-build-system I have also setup a project to achieve the following nice design<->development processes:
 
-Import react components into your FramerX project!
-Export code components and layouts from your FramerX project!
-(Provide version control for FramerX!)
+* Import react components into your FramerX project!
+* Export code components and layouts from your FramerX project!
+* (Provide version control for FramerX!)
 
 ## Why? -> A single source of truth
 
@@ -17,15 +17,15 @@ We use this project as a boilerplate when we want to import real developed react
 
 **Nide side effect: We have a FramerX project with version control now!**
 
-Let's walk through the project structure:
 
 ### Installation
 
-1. `$ git clone ... && cd ...`
+1. `$ git clone git@github.com:zauberware/framerx-react-sync.git && cd framerx-react-sync`
 2. `$ npm install`
 
 Open the FramerX project `styled-components.framerx`. This project has styled-components already preinstalled.
 
+Let's walk through the project structure:
 
 ## Project structure
 
@@ -92,3 +92,19 @@ It bundles `code/`, `design/` and `lib/` into a fresh FramerX project (with styl
 
 ### Problems
 We sometimes have problems, when we push `lib/` into the FramerX project. After reopening everything is fine.
+
+
+## Links
+* https://framer.com/
+* https://reactjs.org/
+* https://www.styled-components.com/
+* https://babeljs.io/
+
+## Author
+
+__Script:__ <https://github.com/zauberware/automated-server-backups>  
+
+__Author website:__ [https://www.zauberware.com](https://www.zauberware.com)    
+__Author:__ zauberware technologies / Simon Franzen <simon@zauberware.com>  
+
+![zauberware technologies](https://avatars3.githubusercontent.com/u/1753330?s=200&v=4)
