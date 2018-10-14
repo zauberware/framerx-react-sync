@@ -4,44 +4,22 @@ Inspired by https://github.com/shiftsave/framerx-build-system I have also setup 
 
 * Import react components into your FramerX project!
 * Export code components and layouts from your FramerX project!
-
-## Why? -> A single source of truth
-
-... tbd ...
+* git version control for FramerX project
 
 ## Why this project?
 
 We use this project as a boilerplate for new FramerX projects. It helps us to import real developed reactjs components into a FramerX project. 
 
-**Nide side effect: We have a FramerX project with version control now!**
-
-
 ## Commands
 
-With these commands you 
+We provided these commands to interact with the FramerX project.
 
-```
-// pushes changes to FramerX
-$ npm run push
-
-// builds library for FramerX
-$ npm run lib:build
-
-// pushes library to FramerX
-$ npm run lib:push
-
-// pulls code components from FramerX
-$ npm run src:pull
-
-// pushes code components to FramerX
-$ npm run src:pull
- 
-// recreates FramerX project file
-$ npm run restore
- 
-```
-
-
+`$ npm run push` pushes changes to FramerX
+`$ npm run lib:build` builds library for FramerX
+`$ npm run lib:push` pushes library to FramerX
+`$ npm run src:pull` pulls code components from FramerX
+`$ npm run src:pull` pushes code components to FramerX
+`$ npm run restore` recreates FramerX project file
 
 ## Installation
 
