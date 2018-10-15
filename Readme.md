@@ -4,30 +4,33 @@ Inspired by https://github.com/shiftsave/framerx-build-system I have also setup 
 
 * Import react components into your FramerX project!
 * Export code components and layouts from your FramerX project!
-* (Provide version control for FramerX!)
-
-## Why? -> A single source of truth
-
-... tbd ...
-
+* git version control for FramerX project
 
 ## Why this project?
 
-We use this project as a boilerplate when we want to import real developed reactjs components into a FramerX project. 
+We use this project as a boilerplate for new FramerX projects. It helps us to import real developed reactjs components into a FramerX project. 
 
-**Nide side effect: We have a FramerX project with version control now!**
+## Commands
 
+We provided these commands to interact with the FramerX project.
 
-### Installation
+`$ npm run push` pushes changes to FramerX
+`$ npm run lib:build` builds library for FramerX
+`$ npm run lib:push` pushes library to FramerX
+`$ npm run src:pull` pulls code components from FramerX
+`$ npm run src:pull` pushes code components to FramerX
+`$ npm run restore` recreates FramerX project file
+
+## Installation
+
+Clone this repository and install dependencies.
 
 1. `$ git clone git@github.com:zauberware/framerx-react-sync.git && cd framerx-react-sync`
 2. `$ npm install`
 
-Open the FramerX project `styled-components.framerx`. This project has styled-components already preinstalled.
+## Project structure
 
 Let's walk through the project structure:
-
-## Project structure
 
 ### _production/
 Example components we want to import into FramerX. 
@@ -56,43 +59,44 @@ Pushes the lib folder into the FramerX project
 
 `$ npm run lib:push`
 
-### symlink real sources to _production/
+### symlink real project to _production/
 
 In the _production folder we put some sample components. If you want to use your production resources here you have to create a symlink.
 
 1. remove current _production folder `$ rm -rf _production`
 2. symlink your project src folder `$ ln -s ~/workspace/your-project/src _production`
 
-## Pull FramerX Code Components into the project
+## Pull and push FramerX Code Components
+
+### src:pull
 
 If you have made changes in the FramerX project you have to pull the changes into `code/` and `design/`.
 
 `$ npm run src:pull`
 
-## Push FramerX Code Components into the FramerX
+### src:push
 
-If you have made changes in `code/` and you want to push them into the FramerX project, you can run this command:
+If you have made changes in `code/` or `design` and you want to push them into the FramerX project, you can run this command:
 
 `$ npm run src:push`
 
 ## Good to know
 
 ### .framerx-files
-.framerx files are just ZIP files. So our pulls and pushes are just zip and unzip.
+.framerx files are just ZIP files. So our pull and push are just zip and unzip.
 
 ### Use FramerX code components with external libs
 If you want to add more library support in FramerX you have to click on `File > Show project folder` and find out the path. Then go with your CLI into that folder. It's a simple node project and you can add libraries like for any other project.
 
-### Restore
-Busted the project file? You can restore a new styled-components.framerx file with:
+### Restore with npm run restore
+Busted the FramerX project file? You can restore a new styled-components.framerx file with:
 
 `$ npm run restore`
 
 It bundles `code/`, `design/` and `lib/` into a fresh FramerX project (with styled-components presintalled).
 
 ### Problems
-We sometimes have problems, when we push `lib/` into the FramerX project. After reopening everything is fine.
-
+If you have opened the project in FramerX and you make a `push` you sometimes have to reopen the FramerX project. Otherwise it won't show the changes. Maybe there is a "refresh"-Button, but I havn't found it so far.
 
 ## Links
 * https://framer.com/
@@ -102,7 +106,7 @@ We sometimes have problems, when we push `lib/` into the FramerX project. After 
 
 ## Author
 
-__Script:__ <https://github.com/zauberware/automated-server-backups>  
+__Script:__ <https://github.com/zauberware/framerx-react-sync>  
 
 __Author website:__ [https://www.zauberware.com](https://www.zauberware.com)    
 __Author:__ zauberware technologies / Simon Franzen <simon@zauberware.com>  
