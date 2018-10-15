@@ -63,3 +63,6 @@ typings/
 
 # node modules
 node_modules
+
+# DS_STORE Mac tonteria
+.DS_STORE
