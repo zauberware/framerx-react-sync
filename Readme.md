@@ -2,9 +2,9 @@
 
 Inspired by https://github.com/shiftsave/framerx-build-system I have also setup a project to achieve the following nice design<->development processes:
 
-* Import react components into your FramerX project!
-* Export code components and layouts from your FramerX project!
-* git version control for FramerX project
+* **Import react components into your FramerX project!**
+* **Export code components and layouts from your FramerX project!**
+* **git version control for FramerX project**
 
 ## Why this project?
 
